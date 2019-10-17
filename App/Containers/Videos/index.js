@@ -8,6 +8,7 @@ import { Colors, ApplicationStyles, Metrics, Images } from '../../Theme'
 import NavigationService from '../../Services/NavigationService'
 
 import VideoActions from '../../Stores/Video/Actions'
+import Container from '../../Components/Container'
 
 
 
@@ -20,9 +21,9 @@ class Videos extends Component {
 
   render() {
     return (
-        <View>
+        <Container>
           
-        </View>
+        </Container>
     )  
     
   }

@@ -1,5 +1,5 @@
 const background = {
-    primary: "#FFFFFF",
+    primary: "#000",
     drawerNavigator: "#404040",
   }
   
