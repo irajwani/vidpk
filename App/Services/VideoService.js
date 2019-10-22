@@ -23,7 +23,7 @@ const videoApiClient = create({
 let fulfilled = (response) => response
 
 function getVideos() {
-  return videoApiClient.get(`v1/getVideos`).then(fulfilled)
+  return videoApiClient.get(`/getVideos`).then(fulfilled)
 }
 
 export const videoService = {

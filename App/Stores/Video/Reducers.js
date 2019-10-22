@@ -7,8 +7,8 @@ export const getVideosRequest = (state) => ({
 })
 
 export const getVideosSuccess = (state, { videos }) => {
-  console.log('success');
-  console.log(data);
+  
+  
   return {
     ...state,
     videos
