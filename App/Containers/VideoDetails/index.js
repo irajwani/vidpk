@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { ScrollView, Text, View, FlatList } from 'react-native'
 
 import styles from './styles'
+import Container from '../../Components/Container';
+import HeaderNavigation from '../../Components/HeaderNavigation';
 
 
 
@@ -13,10 +15,14 @@ class VideoDetails extends Component {
   
 
   render() {
-    return (
-        <View>
+    let video = this.props.navigation.getParam('video')
+    let {title, description, url} = video;
 
-        </View>
+    return (
+      <Container>
+        <HeaderNavigation sideNav={false} text={title}/>
+        
+      </Container>
     )  
     
   }

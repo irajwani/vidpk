@@ -20,12 +20,29 @@ export const getVideosFailure = (state, { errorMessage }) => ({
   errorMessage,
 })
 
+export const showDetailsRequest = (state, {video}) => ({
+  ...state,
+  video
+})
+
+export const showDetailsSuccess = (state) => ({
+  ...state,
+})
+
+export const showDetailsFailure = (state, { errorMessage }) => ({
+  ...state,
+  errorMessage,
+})
 
 
 export const reducer = createReducer(INITIAL_STATE, {
   [VideoTypes.GET_VIDEOS_REQUEST]: getVideosRequest,
   [VideoTypes.GET_VIDEOS_SUCCESS]: getVideosSuccess,
   [VideoTypes.GET_VIDEOS_FAILURE]: getVideosFailure,
+
+  [VideoTypes.SHOW_DETAILS_REQUEST]: showDetailsRequest,
+  [VideoTypes.SHOW_DETAILS_SUCCESS]: showDetailsSuccess,
+  [VideoTypes.SHOW_DETAILS_FAILURE]: showDetailsFailure,
   
 
 })

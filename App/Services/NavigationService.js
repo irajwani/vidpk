@@ -17,6 +17,12 @@ function navigate(routeName, params) {
   )
 }
 
+function goBack() {
+  navigator.dispatch(
+    NavigationActions.back()
+  )
+}
+
 function navigateAndReset(routeName, params) {
   navigator.dispatch(
     StackActions.reset({
@@ -34,6 +40,7 @@ function navigateAndReset(routeName, params) {
 
 export default {
   navigate,
+  goBack,
   navigateAndReset,
   setTopLevelNavigator,
 }

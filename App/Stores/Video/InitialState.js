@@ -1,5 +1,7 @@
 export const INITIAL_STATE = {
     videos: [],
-    errorMessage: null
+    video: {},
+    errorMessage: null,
+    
      
 }

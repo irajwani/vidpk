@@ -7,13 +7,21 @@ export default StyleSheet.create({
         marginBottom: 2,
         borderBottomColor: Colors.white,
         borderBottomWidth: 0.5,
+        flexDirection: 'row'
     },
 
         imageAndReviewsContainer: {
-            flex: 0.2
+            flex: 0.2,
+            justifyContent: 'center',
+            alignItems: 'center'
         },
 
-        videoBodyContainer: {flex: 75, flexDirection: 'column'},
+            videoThumbnail: {
+                width: 50,
+                height: 50
+            },
+
+        videoBodyContainer: {flex: 0.8, flexDirection: 'column',},
 
             titleAndPlayContainer: {
                 flex: 0.3,

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View, TouchableOpacity, Image } from 'react-native'
 import {Metrics, Colors, Images, Fonts} from '../../Theme';
 import { PropTypes } from 'prop-types'
+import NavigationService from '../../Services/NavigationService';
 
 let {style} = Fonts;
 
@@ -13,8 +14,8 @@ export default class HeaderNavigation extends Component {
     render() {
         return (
             <View style={styles.header}>
-                <TouchableOpacity style={styles.actionIconContainer} onPress={() => NavigationService.navigate(this.props.route)}>
-                    <Image source={require(`../../Assets/Images/menu-bars.png`)} style={styles.logo}/>
+                <TouchableOpacity style={styles.actionIconContainer} onPress={() => NavigationService.goBack()}>
+                    <Image source={this.props.sideNav ? require(`../../Assets/Images/menu-bars.png`) : require('../../Assets/Images/white-arrow-back.png')} style={this.props.sideNav ? styles.hamburgerMenu : styles.backArrow}/>
                 </TouchableOpacity>
 
                 <View style={styles.bodyContainer}>
@@ -64,20 +65,25 @@ const styles = StyleSheet.create({
     },
 
     actionIconContainer: {
-        flex: 0.15,
+        flex: 0.225,
         justifyContent: 'center',
         alignItems: 'center',
     },
 
     bodyContainer: {
-        flex: 0.7,
+        flex: 0.55,
         justifyContent: 'center',
         alignItems: 'center'
     },
 
-    logo: {
+    hamburgerMenu: {
         width: 20,
         height: 20,
+    },
+
+    backArrow: {
+        width: 50,
+        height: 25
     },
 
     headerText: {

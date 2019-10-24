@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, View, FlatList, TouchableOpacity } from 'react-native'
+import { ScrollView, Text, Image, View, FlatList, TouchableOpacity } from 'react-native'
 
 import { connect } from 'react-redux'
 
@@ -19,20 +19,19 @@ class Videos extends Component {
       props.getVideos();
   }
 
-  // componentWillMount = () => {
-  //   this.props.getVideos();
-  // }
-
   renderVideo = (video, index) => {
-    console.log(video)
+    
     return (  
       <TouchableOpacity
         key={index}
         style={styles.videoContainer}
-        onPress={()=>console.log('toggle card open')}
+        onPress={() => NavigationService.navigate('VideoDetails', {video: video})}
         >
           <View style={styles.imageAndReviewsContainer}>
-
+            <Image
+              source={require(`../../Assets/Images/logo.png`)}
+              style={styles.videoThumbnail}
+            />
           </View>
 
           <View style={styles.videoBodyContainer}>
@@ -50,7 +49,7 @@ class Videos extends Component {
   
 
   render() {
-    // console.log(this.props.videos)
+    
     return (
         <Container>
           <HeaderNavigation /> 
@@ -74,6 +73,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getVideos: () => dispatch(VideoActions.getVideosRequest()),
+  showDetails: (video) => dispatch(VideoActions.showDetailsRequest(video))
 
 
 })

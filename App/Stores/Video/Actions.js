@@ -5,6 +5,10 @@ const { Types, Creators } = createActions({
   getVideosSuccess: ['videos'],
   getVideosFailure: ['errorMessage'],
 
+  showDetailsRequest: ['video'],
+  showDetailsSuccess: null,
+  showDetailsFailure: ['errorMessage']
+
 })
 
 export const VideoTypes = Types

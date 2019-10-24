@@ -4,7 +4,7 @@ import { takeLatest, all } from 'redux-saga/effects'
 import { VideoTypes } from '../Stores/Video/Actions'
 
 // import { startup } from './StartupSaga'
-import { getVideos } from './VideoSaga'
+import { getVideos, showDetails } from './VideoSaga'
 
 
 export default function* root() {
@@ -16,6 +16,8 @@ export default function* root() {
     // takeLatest(StartupTypes.STARTUP, startup),
 
     takeLatest(VideoTypes.GET_VIDEOS_REQUEST, getVideos),
+
+    takeLatest(VideoTypes.SHOW_DETAILS_REQUEST, showDetails),
   
 
     
