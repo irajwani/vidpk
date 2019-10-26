@@ -8,10 +8,13 @@ const background = {
   const lines = {
     primary: "#D3D4D8"
   }
+
+  const shadow = '#D3D4D8';
   
   export default {
     background,
     lines,
+    shadow,
     linearGradient,
     transparent: 'rgba(0,0,0,0)',
     green: '#2b663d',

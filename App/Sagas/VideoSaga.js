@@ -6,7 +6,8 @@ import NavigationService from '../Services/NavigationService'
 
 export function* getVideos() {
   const videoResponse = yield call(videoService.getVideos)
-  // console.log(videoResponse);
+  console.log(videoResponse);
+  
   if (videoResponse.status === 200) {
     yield put(VideoActions.getVideosSuccess(videoResponse.data))
   } else {

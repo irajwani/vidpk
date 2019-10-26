@@ -1,30 +1,52 @@
 import {StyleSheet} from 'react-native'
 import { Metrics, Colors, Fonts } from '../../Theme';
 export default StyleSheet.create({
+
+    sectionHeaderContainer: {
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        flexDirection: 'row',
+        padding: 5
+    },
+
+    sectionHeader: {
+        ...Fonts.style.h2,
+        color: Colors.white,
+        fontWeight: "500"
+    },
+
     videoContainer: {
-        width: Metrics.screenWidth,
-        height: Metrics.screenHeight*0.15,
-        marginBottom: 2,
-        borderBottomColor: Colors.white,
-        borderBottomWidth: 0.5,
-        flexDirection: 'row'
+        width: Metrics.screenWidth/2.5,
+        height: Metrics.screenHeight*0.25,
+        padding: 10,
+        // marginBottom: 10,
+        // borderBottomColor: Colors.white,
+        // borderBottomWidth: 0.5,
+        flexDirection: 'column',
+        // shadowColor: Colors.shadow,
+        // shadowOffset: ,
+        // shadowOpacity
+
     },
 
         imageAndReviewsContainer: {
-            flex: 0.2,
+            flex: 0.75,
             justifyContent: 'center',
             alignItems: 'center'
         },
 
             videoThumbnail: {
-                width: 50,
-                height: 50
+                width: Metrics.screenWidth/2.7,
+                height: Metrics.screenHeight*0.18,
             },
 
-        videoBodyContainer: {flex: 0.8, flexDirection: 'column',},
+        videoBodyContainer: {
+            flex: 0.25, flexDirection: 'column',
+        
+        },
 
             titleAndPlayContainer: {
-                flex: 0.3,
+                flex: 0.5,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignItems: 'center'
@@ -36,7 +58,9 @@ export default StyleSheet.create({
                 },
 
             descriptionContainer: {
-                flex: 0.7
+                flex: 0.5,
+                justifyContent: 'center',
+                alignItems: 'center'
             },
 
                 description: {

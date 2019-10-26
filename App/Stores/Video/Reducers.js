@@ -7,11 +7,9 @@ export const getVideosRequest = (state) => ({
 })
 
 export const getVideosSuccess = (state, { videos }) => {
-  
-  
   return {
     ...state,
-    videos
+    videos: [{title: 'Top Rated', videos: videos}],
   }
 }
 
